@@ -4,3 +4,5 @@
 [![Actions Status](https://github.com/fishtriangle/backend-project-lvl1/workflows/make-lint/badge.svg)](https://github.com/fishtriangle/backend-project-lvl1/actions)
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+
+<a href="https://asciinema.org/a/qEbgXGhdBdI1NafZ2d5Uxt2NT">Asciinema clip</a>
