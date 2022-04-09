@@ -28,7 +28,7 @@ const questionBlock = (name) => {
     if (isEven !== userAnswerBool) {
       console.log(`'${
         userAnswerBool ? 'Yes' : 'No'
-      }' is wrong answer ;(. Correct answer was \'${
+      }' is wrong answer ;(. Correct answer was '${
         !userAnswerBool ? 'yes' : 'no'
       }'.`);
       return;
