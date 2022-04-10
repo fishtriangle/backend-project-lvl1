@@ -5,4 +5,6 @@
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
-<a href="https://asciinema.org/a/qEbgXGhdBdI1NafZ2d5Uxt2NT">Asciinema clip</a>
+<a href="https://asciinema.org/a/qEbgXGhdBdI1NafZ2d5Uxt2NT">Brain-even</a>
+
+<a href="https://asciinema.org/a/ClHgYFDilzaW0nfEBCWlBF5pP">Brain-calc</a>
