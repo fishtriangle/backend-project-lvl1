@@ -1,6 +1,7 @@
 import brainEvenQuestion from './questionGenerator/brain-even/brainEvenQuestion.js';
 import answerGenerator from './answerGenerator.js';
 import calcQuestion from './questionGenerator/brain-calc/calcQuestion.js';
+import brainGcdQuestion from './questionGenerator/brain-gcd/brainGcdQuestion.js';
 
 export default function questionBlock(name, gameType) {
   let questAnswer;
@@ -14,6 +15,11 @@ export default function questionBlock(name, gameType) {
       questAnswer = calcQuestion();
       break;
     }
+    case 'brainGcd': {
+      questAnswer = brainGcdQuestion();
+      break;
+    }
+
     default: {
       throw new Error('There is no such game!');
     }
