@@ -14,7 +14,6 @@ export default function brainGcdQuestion() {
 
   QuestNAnswer.question = `${firstNum} ${secondNum}`;
   QuestNAnswer.answer = nod(firstNum, secondNum).toString();
-  QuestNAnswer.answerInString = QuestNAnswer.answer.toString();
 
   return QuestNAnswer;
 }

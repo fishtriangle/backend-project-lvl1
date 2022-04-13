@@ -22,6 +22,6 @@ export default function calcQuestion() {
     default:
       throw new Error('No such math expression!');
   }
-  QuestNAnswer.answerInString = QuestNAnswer.answer.toString();
+
   return QuestNAnswer;
 }

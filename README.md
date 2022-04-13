@@ -12,3 +12,6 @@
 <a href="https://asciinema.org/a/vmPf4uFbDk5dFzU7C0IEzbwtS">Brain-gcd</a>
 
 <a href="https://asciinema.org/a/JlGmUvAVeycTHlfbEl8RBtoMp">Brain-progression</a>
+
+<a href="https://asciinema.org/a/cTf2kjjmmiS0hn8lhPkUWNYON">Brain-prime</a>
+

@@ -27,7 +27,6 @@ export default function brainProgression() {
   );
 
   QuestNAnswer.answer = progression[randomProgressionItemNumber].toString();
-  QuestNAnswer.answerInString = progression[randomProgressionItemNumber].toString();
 
   return QuestNAnswer;
 }
