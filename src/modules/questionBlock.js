@@ -2,6 +2,7 @@ import brainEvenQuestion from './questionGenerator/brain-even/brainEvenQuestion.
 import answerGenerator from './answerGenerator.js';
 import calcQuestion from './questionGenerator/brain-calc/calcQuestion.js';
 import brainGcdQuestion from './questionGenerator/brain-gcd/brainGcdQuestion.js';
+import brainProgression from './questionGenerator/brain-progression/brainProgression.js';
 
 export default function questionBlock(name, gameType) {
   let questAnswer;
@@ -17,6 +18,10 @@ export default function questionBlock(name, gameType) {
     }
     case 'brainGcd': {
       questAnswer = brainGcdQuestion();
+      break;
+    }
+    case 'brainProgression': {
+      questAnswer = brainProgression();
       break;
     }
 
