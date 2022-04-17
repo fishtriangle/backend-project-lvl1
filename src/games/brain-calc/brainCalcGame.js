@@ -9,7 +9,23 @@ function calcQuestion() {
   const expression = random(['+', '-', '*']);
 
   QuestNAnswer.question = `${firstNum} ${expression} ${secondNum}`;
-  QuestNAnswer.answer = (eval(QuestNAnswer.question)).toString();
+  switch (expression) {
+    case '+': {
+      QuestNAnswer.answer = `${firstNum + secondNum}`;
+      break;
+    }
+    case '-': {
+      QuestNAnswer.answer = `${firstNum - secondNum}`;
+      break;
+    }
+    case '*': {
+      QuestNAnswer.answer = `${firstNum * secondNum}`;
+      break;
+    }
+    default: {
+      throw new Error('There is no such expression!');
+    }
+  }
 
   return QuestNAnswer;
 }
