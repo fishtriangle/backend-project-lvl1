@@ -15,7 +15,7 @@ function brainProgressionQuestion() {
       return (`${previousValue} ${currentValue}`);
     },
     '',
-  );
+  ).trim();
 
   QuestNAnswer.answer = progression[randomProgressionItemNumber].toString();
 
