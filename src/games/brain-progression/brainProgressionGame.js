@@ -23,19 +23,5 @@ function brainProgressionQuestion() {
 }
 
 export default function brainProgressionGame() {
-  const { questAnswer, userAnswer } = answerGenerator(brainProgressionQuestion, false);
-
-  if (!(userAnswer === questAnswer.answer)) {
-    return {
-      result: false,
-      userAnswer,
-      rightAnswer: questAnswer.answer,
-    };
-  }
-
-  return {
-    result: true,
-    userAnswer,
-    rightAnswer: questAnswer.answer,
-  };
+  return answerGenerator(brainProgressionQuestion, false);
 }

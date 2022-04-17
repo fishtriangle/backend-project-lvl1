@@ -15,19 +15,5 @@ function calcQuestion() {
 }
 
 export default function brainCalcGame() {
-  const { questAnswer, userAnswer } = answerGenerator(calcQuestion, false);
-
-  if (!(userAnswer === questAnswer.answer)) {
-    return {
-      result: false,
-      userAnswer,
-      rightAnswer: questAnswer.answer,
-    };
-  }
-
-  return {
-    result: true,
-    userAnswer,
-    rightAnswer: questAnswer.answer,
-  };
+  return answerGenerator(calcQuestion, false);
 }

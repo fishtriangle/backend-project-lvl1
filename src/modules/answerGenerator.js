@@ -14,7 +14,6 @@ function askQuestion(question, isStringAnswer) {
       return askQuestion(question, isStringAnswer);
     }
   }
-
   return [userAnswer, userAnswerNormalized];
 }
 
@@ -24,7 +23,14 @@ export default function answerGenerator(createQuestAnswer, isStringAnswer) {
 
   const userAnswer = askQuestion(answer.questAnswer.question, isStringAnswer);
 
-  [answer.userAnswer, answer.userAnswerNormalized] = userAnswer;
+  const result = (
+    userAnswer[0] === answer.questAnswer.answer
+    || userAnswer[1] === answer.questAnswer.answer
+  );
 
-  return answer;
+  return {
+    result,
+    userAnswer: userAnswer[0],
+    rightAnswer: answer.questAnswer.answer,
+  };
 }

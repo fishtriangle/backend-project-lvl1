@@ -15,19 +15,5 @@ function brainGcdQuestion() {
 }
 
 export default function brainGcdGame() {
-  const { questAnswer, userAnswer } = answerGenerator(brainGcdQuestion, false);
-
-  if (!(userAnswer === questAnswer.answer)) {
-    return {
-      result: false,
-      userAnswer,
-      rightAnswer: questAnswer.answer,
-    };
-  }
-
-  return {
-    result: true,
-    userAnswer,
-    rightAnswer: questAnswer.answer,
-  };
+  return answerGenerator(brainGcdQuestion, false);
 }

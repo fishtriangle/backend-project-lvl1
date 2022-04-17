@@ -9,19 +9,5 @@ function evenQuestion() {
 }
 
 export default function brainEvenGame() {
-  const { questAnswer, userAnswer, userAnswerNormalized } = answerGenerator(evenQuestion, true);
-
-  if (!(userAnswerNormalized === questAnswer.answer)) {
-    return {
-      result: false,
-      userAnswer,
-      rightAnswer: questAnswer.answer,
-    };
-  }
-
-  return {
-    result: true,
-    userAnswer,
-    rightAnswer: questAnswer.answer,
-  };
+  return answerGenerator(evenQuestion, true);
 }

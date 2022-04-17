@@ -15,23 +15,5 @@ function brainPrimeQuestion() {
 }
 
 export default function brainPrimeGame() {
-  const {
-    questAnswer,
-    userAnswer,
-    userAnswerNormalized,
-  } = answerGenerator(brainPrimeQuestion, true);
-
-  if (!(userAnswerNormalized === questAnswer.answer)) {
-    return {
-      result: false,
-      userAnswer,
-      rightAnswer: questAnswer.answer,
-    };
-  }
-
-  return {
-    result: true,
-    userAnswer,
-    rightAnswer: questAnswer.answer,
-  };
+  return answerGenerator(brainPrimeQuestion, true);
 }
