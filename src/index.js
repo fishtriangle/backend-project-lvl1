@@ -1,18 +1,18 @@
 import greetingBlock from './modules/greetingBlock.js';
-import questions from './textQuestions.js';
-import questionBlock from './modules/questionBlock.js';
 
-export default function game(gameType) {
+export default function game(gameRules, gameFunction) {
   const name = greetingBlock();
-  let isAnswerRight;
 
-  console.log(questions[gameType]);
+  console.log(gameRules);
 
   for (let counter = 0; counter <= 2; counter += 1) {
-    isAnswerRight = questionBlock(name, gameType);
-    if (!isAnswerRight) {
+    const { result, userAnswer, rightAnswer } = gameFunction();
+    if (!result) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
+    console.log('Correct!');
   }
 
   console.log(`Congratulations, ${name}!`);
