@@ -56,8 +56,8 @@ make brain-prime
 make brain-progression
 ```
 
-Install games:
-First local publish:
+Install games: 
+first local publish:
 ```
 make publish
 ```
