@@ -1,6 +1,5 @@
 import random from '../../utils/random.js';
 import answerGenerator from '../../modules/answerGenerator.js';
-import answerNormalize from '../../modules/answerNormalize.js';
 
 function evenQuestion() {
   const QuestNAnswer = {};
@@ -10,9 +9,7 @@ function evenQuestion() {
 }
 
 export default function brainEvenGame() {
-  const questAnswer = evenQuestion();
-  const userAnswer = answerGenerator(questAnswer.question);
-  const userAnswerNormalized = answerNormalize(userAnswer, questAnswer.question);
+  const { questAnswer, userAnswer, userAnswerNormalized } = answerGenerator(evenQuestion, true);
 
   if (!(userAnswerNormalized === questAnswer.answer)) {
     return {

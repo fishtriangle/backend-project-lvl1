@@ -15,9 +15,7 @@ function calcQuestion() {
 }
 
 export default function brainCalcGame() {
-  const questAnswer = calcQuestion();
-
-  const userAnswer = answerGenerator(questAnswer.question);
+  const { questAnswer, userAnswer } = answerGenerator(calcQuestion, false);
 
   if (!(userAnswer === questAnswer.answer)) {
     return {

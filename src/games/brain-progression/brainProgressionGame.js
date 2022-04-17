@@ -23,8 +23,7 @@ function brainProgressionQuestion() {
 }
 
 export default function brainProgressionGame() {
-  const questAnswer = brainProgressionQuestion();
-  const userAnswer = answerGenerator(questAnswer.question);
+  const { questAnswer, userAnswer } = answerGenerator(brainProgressionQuestion, false);
 
   if (!(userAnswer === questAnswer.answer)) {
     return {

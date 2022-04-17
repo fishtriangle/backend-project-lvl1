@@ -15,8 +15,7 @@ function brainGcdQuestion() {
 }
 
 export default function brainGcdGame() {
-  const questAnswer = brainGcdQuestion();
-  const userAnswer = answerGenerator(questAnswer.question);
+  const { questAnswer, userAnswer } = answerGenerator(brainGcdQuestion, false);
 
   if (!(userAnswer === questAnswer.answer)) {
     return {
