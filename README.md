@@ -1,5 +1,4 @@
 <h1 align='center'>Backend project level 1</h1>
-<hr>
 
 ### Hexlet tests and linter status:
 
