@@ -1,5 +1,4 @@
 <h1 align='center'>Backend project level 1</h1>
-<hr>
 
 ### Hexlet tests and linter status:
 
@@ -56,8 +55,8 @@ make brain-prime
 make brain-progression
 ```
 
-Install games:
-First local publish:
+Install games: 
+first local publish:
 ```
 make publish
 ```
