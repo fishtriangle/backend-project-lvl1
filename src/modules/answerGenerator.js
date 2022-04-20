@@ -1,36 +1,15 @@
 import readlineSync from 'readline-sync';
 import answerNormalize from './answerNormalize.js';
 
-function askQuestion(question, isStringAnswer) {
-  console.log(`Question: ${question}`);
+export default function answerGenerator(needNormalize) {
+  let userAnswer = readlineSync.question('Your answer: ');
 
-  const userAnswer = readlineSync.question('Your answer: ');
-  let userAnswerNormalized;
-
-  if (isStringAnswer) {
-    userAnswerNormalized = answerNormalize(userAnswer);
-    if (!userAnswerNormalized) {
+  if (needNormalize) {
+    userAnswer = answerNormalize(userAnswer);
+    if (!userAnswer) {
       console.log('You gave not "yes" or "no" reply. Answer properly!');
-      return askQuestion(question, isStringAnswer);
+      return answerGenerator(needNormalize);
     }
   }
-  return [userAnswer, userAnswerNormalized];
-}
-
-export default function answerGenerator(createQuestAnswer, isStringAnswer) {
-  const answer = {};
-  answer.questAnswer = createQuestAnswer();
-
-  const userAnswer = askQuestion(answer.questAnswer.question, isStringAnswer);
-
-  const result = (
-    userAnswer[0] === answer.questAnswer.answer
-    || userAnswer[1] === answer.questAnswer.answer
-  );
-
-  return {
-    result,
-    userAnswer: userAnswer[0],
-    rightAnswer: answer.questAnswer.answer,
-  };
+  return userAnswer;
 }

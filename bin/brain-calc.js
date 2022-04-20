@@ -2,6 +2,6 @@
 
 import game from '../src/index.js';
 import questions from '../src/textQuestions.js';
-import brainCalcGame from '../src/games/brain-calc/brainCalcGame.js';
+import brainCalcGame from '../src/games/brainCalcGame.js';
 
-game(questions.calcGame, brainCalcGame);
+game(questions.calcGame, brainCalcGame, false);

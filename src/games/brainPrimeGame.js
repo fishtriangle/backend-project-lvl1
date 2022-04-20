@@ -1,7 +1,6 @@
-import random from '../../utils/random.js';
-import answerGenerator from '../../modules/answerGenerator.js';
+import random from '../utils/random.js';
 
-function brainPrimeQuestion() {
+export default function brainPrimeGame() {
   const QuestNAnswer = {};
   QuestNAnswer.question = random(2, 3600);
   for (let divider = QuestNAnswer.question - 1; divider >= 2; divider -= 1) {
@@ -12,8 +11,4 @@ function brainPrimeQuestion() {
   }
   QuestNAnswer.answer = 'Yes';
   return QuestNAnswer;
-}
-
-export default function brainPrimeGame() {
-  return answerGenerator(brainPrimeQuestion, true);
 }
