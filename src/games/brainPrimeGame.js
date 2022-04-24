@@ -1,14 +1,17 @@
 import random from '../utils/random.js';
 
-export default function brainPrimeGame() {
-  const QuestNAnswer = {};
-  QuestNAnswer.question = random(2, 3600);
-  for (let divider = QuestNAnswer.question - 1; divider >= 2; divider -= 1) {
-    if (QuestNAnswer.question % divider === 0) {
-      QuestNAnswer.answer = 'No';
-      return QuestNAnswer;
+const isPrime = (number) => {
+  for (let divider = number - 1; divider >= 2; divider -= 1) {
+    if (number % divider === 0) {
+      return false;
     }
   }
-  QuestNAnswer.answer = 'Yes';
-  return QuestNAnswer;
+  return true;
+};
+
+export default function brainPrimeGame() {
+  const question = random(2, 3600);
+  const answer = isPrime(question) ? 'yes' : 'no';
+
+  return [question, answer];
 }

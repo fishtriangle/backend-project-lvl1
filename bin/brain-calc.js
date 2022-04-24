@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import game from '../src/index.js';
-import questions from '../src/textQuestions.js';
-import brainCalcGame from '../src/games/brainCalcGame.js';
+import { calcGame } from '../src/index.js';
 
-game(questions.calcGame, brainCalcGame, false);
+calcGame();

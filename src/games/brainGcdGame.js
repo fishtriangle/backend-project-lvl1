@@ -7,13 +7,11 @@ function gcd(x, y) {
 }
 
 export default function brainGcdGame() {
-  const QuestNAnswer = {};
-
   const firstNum = random(1, 100);
   const secondNum = random(1, 100);
 
-  QuestNAnswer.question = `${firstNum} ${secondNum}`;
-  QuestNAnswer.answer = gcd(firstNum, secondNum).toString();
+  const question = `${firstNum} ${secondNum}`;
+  const answer = gcd(firstNum, secondNum).toString();
 
-  return QuestNAnswer;
+  return [question, answer];
 }

@@ -2,30 +2,26 @@ import random from '../utils/random.js';
 
 function createProgression(startingNumber = 1, step = 1, length = 5) {
   const progression = [];
-  let aggregator = startingNumber;
-  for (let i = 1; i <= length; i += 1) {
+  let aggregator;
+  for (let i = 0; i <= length; i += 1) {
+    aggregator = startingNumber + (step * i);
     progression.push(aggregator);
-    aggregator += step;
   }
   return progression;
 }
 
+function createProgressionQuestion(progression, hiddenIndex) {
+  const question = [...progression];
+  question[hiddenIndex] = '..';
+  return question.join(' ');
+}
+
 export default function brainProgressionGame() {
-  const QuestNAnswer = {};
   const progression = createProgression(random(0, 100), random(1, 10), random(5, 15));
-  const randomProgressionItemNumber = random(0, progression.length - 1);
+  const hiddenIndex = random(0, progression.length - 1);
 
-  QuestNAnswer.question = progression.reduce(
-    (previousValue, currentValue) => {
-      if (currentValue === progression[randomProgressionItemNumber]) {
-        return `${previousValue} ..`;
-      }
-      return (`${previousValue} ${currentValue}`);
-    },
-    '',
-  ).trim();
+  const question = createProgressionQuestion(progression, hiddenIndex);
+  const answer = progression[hiddenIndex].toString();
 
-  QuestNAnswer.answer = progression[randomProgressionItemNumber].toString();
-
-  return QuestNAnswer;
+  return [question, answer];
 }
