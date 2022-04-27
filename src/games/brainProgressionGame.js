@@ -1,4 +1,7 @@
 import random from '../utils/random.js';
+import game from '../gameEngine.js';
+
+const progressionQuestion = 'What number is missing in the progression?';
 
 function createProgression(startingNumber = 1, step = 1, length = 5) {
   const progression = [];
@@ -25,3 +28,5 @@ export default function brainProgressionGame() {
 
   return [question, answer];
 }
+
+export const progressionGame = () => game(progressionQuestion, brainProgressionGame);
